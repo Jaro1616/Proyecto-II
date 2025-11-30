@@ -1,0 +1,14 @@
+[
+  {
+    "imagen": "fotoJarret.jpg",
+    "nombre": "Jarret Orozco Salas",
+    "correo": "jaorozcosa@est.utn.ac.cr",
+    "descripción": "Jarret es estudiante de Ingeniería en Desarrollo de Software en la Universidad Técnica Nacional (UTN), con formación previa en el Colegio Técnico Profesional de Puerto Viejo. Se caracteriza por su enfoque metódico y colaborativo, destacando en proyectos de desarrollo web con HTML, CSS y JavaScript, así como en auditoría y documentación de procesos técnicos y contables. Su interés por la accesibilidad, la modularidad del código y la integridad académica lo convierten en un perfil comprometido con la excelencia y la trazabilidad en cada proyecto."
+  },
+  {
+    "imagen": "fotoRidley.jpeg",
+    "nombre": "Ridley Dario Meneses Lira",
+    "correo": "rimenesesli@est.utn.ac.cr",
+    "descripción": "Ridley es estudiante de Ingeniería en Desarrollo de Software en la Universidad Técnica Nacional (UTN), con formación técnica en el Colegio Técnico Profesional de Puerto Viejo. Se distingue por su enfoque analítico y colaborativo en proyectos de programación y desarrollo web, aplicando buenas prácticas en HTML, CSS y JavaScript. Su interés por la innovación, la documentación clara y la construcción de soluciones accesibles lo convierten en un perfil académico comprometido con la excelencia y la mejora continua en entornos tecnológicos."  
+  }
+]

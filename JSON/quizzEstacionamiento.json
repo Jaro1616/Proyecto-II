@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Dónde está prohibido estacionar?",
+    "opciones": [
+      { "texto": "En zonas de discapacitados sin permiso", "correcto": false, "feedback": "Incorrecto: sanción directa." },
+      { "texto": "Frente a hidrantes", "correcto": true, "feedback": "Correcto." },
+      { "texto": "En la calle si no hay señal", "correcto": false, "feedback": "Incorrecto: depende de la normativa, no es libre." },
+      { "texto": "En rampas de acceso", "correcto": false, "feedback": "Incorrecto: está prohibido bloquear accesos." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si estacionas en una acera?",
+    "opciones": [
+      { "texto": "Permitido si no hay peatones", "correcto": false, "feedback": "Incorrecto: la acera es exclusiva para peatones." },
+      { "texto": "Permitido de noche", "correcto": false, "feedback": "Incorrecto: la prohibición es permanente." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es rápido", "correcto": false, "feedback": "Incorrecto: nunca está permitido." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si estacionas en doble fila?",
+    "opciones": [
+      { "texto": "Permitido si esperas a alguien", "correcto": false, "feedback": "Incorrecto: la ley lo prohíbe." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es menos de 5 minutos", "correcto": false, "feedback": "Incorrecto: no hay tiempo permitido." },
+      { "texto": "Permitido si dejas las luces", "correcto": false, "feedback": "Incorrecto: sigue siendo infracción." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si estacionas en un paso peatonal?",
+    "opciones": [
+      { "texto": "Permitido si es rápido", "correcto": false, "feedback": "Incorrecto: no hay excepciones." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: la prohibición es permanente." },
+      { "texto": "Permitido si no hay peatones", "correcto": false, "feedback": "Incorrecto: siempre está prohibido." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si estacionas en una curva?",
+    "opciones": [
+      { "texto": "Permitido si usas luces", "correcto": false, "feedback": "Incorrecto: no elimina el riesgo." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si no hay tráfico", "correcto": false, "feedback": "Incorrecto: sigue siendo peligroso." },
+      { "texto": "Permitido si es de día", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." }
+    ]
+  }
+]

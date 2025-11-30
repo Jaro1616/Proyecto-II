@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="IMG/legalRadarLogo-SinFondo.png" type="image/png">
+
+    <!-- AQUI EL LINK CSS -->
+     <link rel="stylesheet" href="CSS/estiloIndex.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/legalRadarLogo-SinFondo.png" alt="Logo de Legal Radar">
+        </div>
+        <h1>LEGAL RADAR - NORMAX</h1>
+        <nav class="nav-principal">
+            <ul class="nav-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercaDe.html">Acerca de nosotros</a></li>
+                <li><a href="seccionInformativa.html">Seccion Informativa</a></li>
+                <li><a href="modulos.html">Modulos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PARA DESCRIPCION Y LOGO -->
+        <section class="hero">
+            <h2>LEGAL RADAR - NORMAX</h2>
+            <p>DESCRIPCION (AQUI LA DESCRIPCION)XXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <img src="IMG/legalRadarLogo-SinFondo.png" alt="Logo de LegalRadar">
+        </section> 
+
+        <!-- PARA RESUMEN DE LA PAGINA PROBLEMA-SOLUCION -->
+        <section class="resumen-solucion">
+            <h2>Problematica</h2>
+            <p>TEXTOOOOOOOOOOOOOOOOO</p>
+            <h2>Solución</h2>
+            <p>TEXTOOOOOOOOOOOOOOOOO</p>
+
+            <h2>Lo que ofrecemos</h2>
+            <ul id="solucion"></ul>
+            <p style="text-align: center; font-style: italic;">Estudio rapido y facil.</p>
+        </section> 
+
+        <!-- PARA EL CARRUSEL -->
+        <section>
+            <div class="carrusel">
+                <button id="prev">⬅</button>
+                <img id="imagenCarrusel" src="" alt="Imagen carrusel">
+                <button id="next">➡</button>
+            </div>
+            <script src="JS/scriptCarrusel.js"></script>
+        </section> 
+
+        <!-- INTERACCIONES CON JS MINIMO 2 -->
+        <!-- CARGAR DEL JSON LA INFO (PROBLEMA-SOLUCION, CARRUSEL) -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGALRADAS. Todos los derechos reservados</p>
+        <p>
+            <a href="https://www.facebook.com">Facebook</a> |
+            <a href="https://www.instagram.com">Instagram</a> |
+            <a href="https://www.tiktok.com">TikTok</a>
+        </p>
+    </footer>
+</body>
+</html>

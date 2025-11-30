@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Qué ocurre si conduces sin licencia?",
+    "opciones": [
+      { "texto": "Permitido si es tu carro", "correcto": false, "feedback": "Incorrecto: no importa la propiedad." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si sabes manejar", "correcto": false, "feedback": "Incorrecto: la licencia es obligatoria." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si circulas sin marchamo al día?",
+    "opciones": [
+      { "texto": "Permitido si es reciente", "correcto": false, "feedback": "Incorrecto: debe estar vigente." },
+      { "texto": "Permitido si no hay operativos", "correcto": false, "feedback": "Incorrecto: sigue siendo ilegal." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si no portas documentos del vehículo?",
+    "opciones": [
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es tu carro", "correcto": false, "feedback": "Incorrecto: no importa la propiedad." },
+      { "texto": "Permitido si los tienes en casa", "correcto": false, "feedback": "Incorrecto: deben estar contigo." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si conduces con licencia vencida?",
+    "opciones": [
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es tu carro", "correcto": false, "feedback": "Incorrecto: no importa la propiedad." },
+      { "texto": "Permitido si sabes manejar", "correcto": false, "feedback": "Incorrecto: debe estar vigente." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si conduces sin seguro obligatorio?",
+    "opciones": [
+      { "texto": "Permitido si es tu carro", "correcto": false, "feedback": "Incorrecto: no importa la propiedad." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: prohibición aplica siempre." },
+      { "texto": "Multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si no chocas", "correcto": false, "feedback": "Incorrecto: el seguro es obligatorio siempre." }
+    ]
+  }
+]

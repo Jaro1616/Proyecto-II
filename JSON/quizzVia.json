@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Qué debe hacer un conductor si el semáforo está en rojo?",
+    "opciones": [
+      { "texto": "Avanzar lentamente", "correcto": false, "feedback": "Incorrecto: no se permite avanzar aunque sea despacio." },
+      { "texto": "Detenerse completamente", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Tocar la bocina y seguir", "correcto": false, "feedback": "Incorrecto: irrespetar el semáforo es sancionado." },
+      { "texto": "Avanzar si no vienen carros", "correcto": false, "feedback": "Incorrecto: según la ley en Costa Rica está prohibido saltarse un semáforo en rojo." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si un conductor usa el celular mientras maneja?",
+    "opciones": [
+      { "texto": "Es permitido en carreteras vacías", "correcto": false, "feedback": "Incorrecto: la ley aplica en todo momento." },
+      { "texto": "No pasa nada si es rápido", "correcto": false, "feedback": "Incorrecto: cualquier uso del celular al volante está prohibido." },
+      { "texto": "Puede recibir una multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Solo es sanción si habla más de 5 minutos", "correcto": false, "feedback": "Incorrecto: no hay tiempo permitido." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué debe hacer un conductor al ver una señal de “ALTO”?",
+    "opciones": [
+      { "texto": "Reducir velocidad y seguir", "correcto": false, "feedback": "Incorrecto: debe detenerse por completo." },
+      { "texto": "Tocar la bocina y pasar", "correcto": false, "feedback": "Incorrecto: no sustituye la detención." },
+      { "texto": "Frenar completamente", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Ignorar si no hay tráfico", "correcto": false, "feedback": "Incorrecto: la señal es obligatoria siempre." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si un conductor excede el límite de velocidad?",
+    "opciones": [
+      { "texto": "Es permitido en carreteras vacías", "correcto": false, "feedback": "Incorrecto: el límite es obligatorio." },
+      { "texto": "No pasa nada si es de noche", "correcto": false, "feedback": "Incorrecto: la ley aplica siempre." },
+      { "texto": "Puede recibir una multa", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Solo si lo detiene un oficial", "correcto": false, "feedback": "Incorrecto: los radares también sancionan." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué debe hacer un conductor en una zona escolar?",
+    "opciones": [
+      { "texto": "Ignorar las señales", "correcto": false, "feedback": "Incorrecto: la ley exige respetarlas." },
+      { "texto": "Reducir la velocidad", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Acelerar para salir rápido", "correcto": false, "feedback": "Incorrecto: es peligroso y sancionado." },
+      { "texto": "Mantener la misma velocidad", "correcto": false, "feedback": "Incorrecto: debe disminuirla." }
+    ]
+  }
+]

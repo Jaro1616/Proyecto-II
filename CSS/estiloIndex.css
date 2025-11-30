@@ -1,0 +1,13 @@
+
+/* SECCION DEL CARRUSEL */
+#imagenCarrusel {
+  width: 800px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#imagenCarrusel.fade {
+  opacity: 0;
+}

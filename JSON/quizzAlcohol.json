@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Qué ocurre si conduces bajo efectos del alcohol?",
+    "opciones": [
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: la prohibición aplica siempre." },
+      { "texto": "Permitido si no chocas", "correcto": false, "feedback": "Incorrecto: es ilegal independientemente del resultado." },
+      { "texto": "Multa y sanción", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es poco", "correcto": false, "feedback": "Incorrecto: cualquier nivel que afecte la conducción es sancionable." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si conduces bajo drogas ilícitas?",
+    "opciones": [
+      { "texto": "Permitido si no hay tráfico", "correcto": false, "feedback": "Incorrecto: el riesgo existe y la ley lo prohíbe." },
+      { "texto": "Permitido si no chocas", "correcto": false, "feedback": "Incorrecto: sigue siendo ilegal." },
+      { "texto": "Multa y sanción", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es poco", "correcto": false, "feedback": "Incorrecto: cualquier afectación por sustancias es sancionable." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué ocurre si te niegas a la prueba de alcoholemia?",
+    "opciones": [
+      { "texto": "Permitido si crees que estás bien", "correcto": false, "feedback": "Incorrecto: la negativa es sancionada por obstruir el control." },
+      { "texto": "Multa y sanción", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si el oficial no insiste", "correcto": false, "feedback": "Incorrecto: la ley no depende de insistencia." },
+      { "texto": "Permitido si es de noche", "correcto": false, "feedback": "Incorrecto: la obligación es permanente." }
+    ]
+  },
+  {
+    "pregunta": "Si tomaste y no estás seguro de tu estado, ¿qué debes hacer?",
+    "opciones": [
+      { "texto": "Tomar café y salir", "correcto": false, "feedback": "Incorrecto: el café no elimina el alcohol ni su efecto." },
+      { "texto": "Ir solo por rutas vacías", "correcto": false, "feedback": "Incorrecto: sigue siendo peligroso e ilegal." },
+      { "texto": "No conducir y buscar un conductor designado", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Manejar despacio", "correcto": false, "feedback": "Incorrecto: el alcohol afecta reflejos y juicio igual." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué pasa si conduces con alcohol y drogas combinadas?",
+    "opciones": [
+      { "texto": "Permitido si te sientes bien", "correcto": false, "feedback": "Incorrecto: la percepción está afectada; sigue siendo ilegal." },
+      { "texto": "Multa y sanción agravada", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Permitido si es poca cantidad", "correcto": false, "feedback": "Incorrecto: la combinación agrava el riesgo y la sanción." },
+      { "texto": "Permitido si no hay pasajeros", "correcto": false, "feedback": "Incorrecto: la seguridad vial no depende de llevar gente." }
+    ]
+  }
+]

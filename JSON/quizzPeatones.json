@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Qué debe hacer un peatón para cruzar la calle?",
+    "opciones": [
+      { "texto": "Correr entre los carros para pasar rápido", "correcto": false, "feedback": "Incorrecto: aumenta el riesgo y es indebido." },
+      { "texto": "Usar el paso peatonal y respetar semáforo peatonal", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Seguir al grupo aunque crucen mal", "correcto": false, "feedback": "Incorrecto: la responsabilidad es individual." },
+      { "texto": "Cruzar por donde sea si no hay carros", "correcto": false, "feedback": "Incorrecto: debe usar zonas designadas para cruzar." }
+    ]
+  },
+  {
+    "pregunta": "¿Es correcto caminar por la calzada cuando hay acera?",
+    "opciones": [
+      { "texto": "Sí, si caminas pegado al borde", "correcto": false, "feedback": "Incorrecto: sigue siendo riesgoso e indebido." },
+      { "texto": "Sí, si la acera está ocupada", "correcto": false, "feedback": "Incorrecto: debe usarse la acera salvo fuerza mayor." },
+      { "texto": "Sí, si vas en grupo grande", "correcto": false, "feedback": "Incorrecto: la calzada es para vehículos." },
+      { "texto": "No, debe usarse la acera", "correcto": true, "feedback": "Correcto." }
+    ]
+  },
+  {
+    "pregunta": "¿Qué debe hacer un peatón ante una señal de “ALTO”?",
+    "opciones": [
+      { "texto": "Ignorar si el semáforo peatonal está apagado", "correcto": false, "feedback": "Incorrecto: debe priorizar seguridad y señales." },
+      { "texto": "Seguir si no ve carros cerca", "correcto": false, "feedback": "Incorrecto: debe respetar la señal y confirmar seguridad." },
+      { "texto": "Detenerse y verificar ambos lados antes de cruzar", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Correr para pasar primero", "correcto": false, "feedback": "Incorrecto: conducta insegura y sancionable." }
+    ]
+  },
+  {
+    "pregunta": "¿Puede un peatón cruzar entre vehículos estacionados?",
+    "opciones": [
+      { "texto": "Sí, si se asoma primero", "correcto": false, "feedback": "Incorrecto: la visibilidad sigue siendo limitada." },
+      { "texto": "Sí, si es más corto", "correcto": false, "feedback": "Incorrecto: reduce visibilidad y aumenta riesgo." },
+      { "texto": "No, debe usar zonas designadas y visibles", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Sí, si no hay paso peatonal cerca", "correcto": false, "feedback": "Incorrecto: debe buscar un cruce seguro." }
+    ]
+  },
+  {
+    "pregunta": "¿Cómo debe caminar un peatón en una vía sin acera?",
+    "opciones": [
+      { "texto": "Por el borde izquierdo de frente al tráfico", "correcto": true, "feedback": "Correcto." },
+      { "texto": "Alternar lados según la sombra", "correcto": false, "feedback": "Incorrecto: la prioridad es la seguridad y visibilidad." },
+      { "texto": "Por el borde derecho a espaldas del tráfico", "correcto": false, "feedback": "Incorrecto: reduces capacidad de anticipar vehículos." },
+      { "texto": "Por el centro si no hay carros", "correcto": false, "feedback": "Incorrecto: peligroso y prohibido." }
+    ]
+  }
+]
