@@ -7,53 +7,164 @@
     <link rel="icon" href="IMG/legalRadarLogo-SinFondo.png" type="image/png">
 
     <!-- AQUI EL LINK CSS -->
+    <link rel="stylesheet" href="CSS/estiloIndex.css">
+    <!--CDN de Tailwiind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="IMG/legalRadarLogo-SinFondo.png" alt="Logo de Legal Radar">
-        </div>
-        <H1>LEGAL RADAR - NORMAX</H1>
-        <nav class="nav-principal">
-            <ul class="nav-principal">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="acercaDe.html">Acerca de nosotros</a></li>
-                <li><a href="seccionInformativa.html">Seccion Informativa</a></li>
-                <li><a href="modulos.html">Modulos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <div class="menu-hamburguesa">
-                <span></span>
-                <span></span>
-                <span></span>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-yellow-400 p-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="logo flex items-center">
+                <img src="IMG/legalRadarLogo-SinFondo2.png" alt="Logo de Legal Radar"
+                    class="max-w-[120px] h-auto object-contain" />
             </div>
+            <h1 class="text-xl font-bold">LEGAL RADAR - NORMAX</h1>
+        </div>
+        
+        <nav class="nav-principal">
+            <ul class="nav-principal hidden md:flex space-x-6 font-medium">
+                <li><a href="index.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Inicio</a></li>
+                <li><a href="acercaDe.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Acerca de nosotros</a></li>
+                <li><a href="seccionInformativa.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Seccion Informativa</a></li>
+                <li><a href="modulos.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Modulos</a></li>
+                <li><a href="contacto.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Contacto</a></li>
+            </ul>
+            <button class="menu-hamburguesa md:hidden flex flex-col space-y-1 cursor-pointer" aria-label="Menu">
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-1"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-2"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-3"></span>
+            </button>
+        </nav>
+        
+        <nav id="navMobile" class="nav-mobile hidden md:hidden flex-col fixed top-0 right-0 h-screen w-64 bg-yellow-400 shadow-lg z-40 transform transition-transform duration-300 translate-x-full pt-4 px-4">
+            <button class="menu-hamburguesa-close self-end flex flex-col space-y-1 cursor-pointer mb-6" aria-label="Cerrar">
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-1"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-2"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-3"></span>
+            </button>
+            <a href="index.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Inicio</a>
+            <a href="acercaDe.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Acerca de nosotros</a>
+            <a href="seccionInformativa.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Seccion Informativa</a>
+            <a href="modulos.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Modulos</a>
+            <a href="contacto.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Contacto</a>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Autores</h1>
-            <div id="contenedor"></div>
+    <main class="flex-grow">
+        <section class="max-w-6xl mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">Autores</h1>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Somos un equipo de desarrollo apasionado por crear soluciones innovadoras y accesibles. Nuestro objetivo es contribuir positivamente a través de tecnología responsable y de calidad.</p>
+            <div id="contenedor" class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6"></div>
+            
+            <!-- Iconos de redes sociales para mostrar en las tarjetas -->
+            <template id="templateIconos">
+                <div class="border-t border-gray-200 px-6 py-4 flex gap-4 justify-center">
+                    <a href="https://www.facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors" title="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-pink-600 hover:text-pink-800 transition-colors" title="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.79.263-1.459.597-2.119 1.357-.76.66-1.094 1.329-1.357 2.119-.267.788-.468 1.658-.528 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.528 2.936.263.79.597 1.459 1.357 2.119.66.76 1.329 1.094 2.119 1.357.788.268 1.658.468 2.936.528C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.936-.528.79-.263 1.459-.597 2.119-1.357.76-.66 1.094-1.329 1.357-2.119.268-.788.468-1.658.528-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.149-.528-2.936-.263-.79-.597-1.459-1.357-2.119-.66-.76-1.329-1.094-2.119-1.357-.788-.267-1.658-.468-2.936-.528C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm5.593-10.531a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.github.com" target="_blank" class="text-gray-800 hover:text-gray-600 transition-colors" title="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </template>
         </section>
         
-        <section>
-            <h1>Descripcion del proyecto</h1>
-            <p>AQUI VA LA INFO DEL PROYECTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
-        </section>
+    <section class="text-center mt-10 mb-16 px-4">
+        <h1 class="text-3xl font-bold inline-block border-b-4 border-green-500 pb-1">
+            Descripción del proyecto
+        </h1>
 
-        <button id="btnArriba">⬆</button>
+        <p class="mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+            Se desarrollo una solución tecnológica que ayuda a que la información sea clara y accesible, ofreciendo retroalimentación e 
+            interacción con el usuario.
+            <br>
+            El prototipo se conforma de cinco módulos, cada uno se centra en cada una de las categorías de multas. Cada módulo 
+            presenta cinco preguntas relacionadas a esa categoría, con cuatro opciones de las cuales solo una es la correcta. En 
+            caso de seleccionar la incorrecta se incorpora un policía que explica la razón del error, para reforzar el aprendizaje
+            de una manera pedagógica.
+        </p>
+    </section>
+
+    <button id="btnArriba" 
+            class="fixed bottom-6 right-6 bg-green-500 text-white text-3xl 
+                p-4 rounded-full shadow-[0_0_20px_rgba(0,255,0,0.6)] 
+                hover:scale-110 transition">
+        ⬆
+    </button>
+
 
         <!-- AQUI VA EL LLAMADO AL SCRIPT-->
         <script src="JS/scriptAcercaDe.js"></script>
     </main>
 
-    <footer>
-        <p>&copy; 2025 LEGALRADAS. Todos los derechos reservados</p>
-        <p>
-            <a href="https://www.facebook.com">Facebook</a> |
-            <a href="https://www.instagram.com">Instagram</a> |
-            <a href="https://www.tiktok.com">TikTok</a>
-        </p>
+    <footer class="bg-gray-800 border-t-4 border-red-600 py-6 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4">
+            <p class="text-white text-center">&copy; 2025 LEGALRADAS. Todos los derechos reservados</p>
+            <div class="w-24 border-t border-white opacity-50"></div>
+            <div class="flex gap-6 justify-center">
+                <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-400 transition-colors" title="Facebook">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-400 transition-colors" title="Instagram">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.79.263-1.459.597-2.119 1.357-.76.66-1.094 1.329-1.357 2.119-.267.788-.468 1.658-.528 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.528 2.936.263.79.597 1.459 1.357 2.119.66.76 1.329 1.094 2.119 1.357.788.268 1.658.468 2.936.528C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.936-.528.79-.263 1.459-.597 2.119-1.357.76-.66 1.094-1.329 1.357-2.119.268-.788.468-1.658.528-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.149-.528-2.936-.263-.79-.597-1.459-1.357-2.119-.66-.76-1.329-1.094-2.119-1.357-.788-.267-1.658-.468-2.936-.528C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm5.593-10.531a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+        const menuHamburguesaClose = document.querySelector('.menu-hamburguesa-close');
+        const navMobile = document.getElementById('navMobile');
+        const navLinks = navMobile.querySelectorAll('a');
+        const line1 = document.querySelector('.hamburguesa-line-1');
+        const line2 = document.querySelector('.hamburguesa-line-2');
+        const line3 = document.querySelector('.hamburguesa-line-3');
+        const closeLine1 = document.querySelector('.hamburguesa-close-line-1');
+        const closeLine2 = document.querySelector('.hamburguesa-close-line-2');
+        const closeLine3 = document.querySelector('.hamburguesa-close-line-3');
+
+        function abrirMenu() {
+            navMobile.classList.remove('hidden');
+            setTimeout(() => navMobile.classList.remove('translate-x-full'), 10);
+            line1.style.transform = 'rotate(45deg) translateY(12px)';
+            line2.style.opacity = '0';
+            line3.style.transform = 'rotate(-45deg) translateY(-12px)';
+            closeLine1.style.transform = 'rotate(45deg) translateY(12px)';
+            closeLine2.style.opacity = '0';
+            closeLine3.style.transform = 'rotate(-45deg) translateY(-12px)';
+        }
+
+        function cerrarMenu() {
+            navMobile.classList.add('translate-x-full');
+            setTimeout(() => navMobile.classList.add('hidden'), 300);
+            line1.style.transform = 'rotate(0deg) translateY(0px)';
+            line2.style.opacity = '1';
+            line3.style.transform = 'rotate(0deg) translateY(0px)';
+            closeLine1.style.transform = 'rotate(0deg) translateY(0px)';
+            closeLine2.style.opacity = '1';
+            closeLine3.style.transform = 'rotate(0deg) translateY(0px)';
+        }
+
+        menuHamburguesa.addEventListener('click', abrirMenu);
+        menuHamburguesaClose.addEventListener('click', cerrarMenu);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', cerrarMenu);
+        });
+    </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 
+
 /* SECCION DEL CARRUSEL */
 #imagenCarrusel {
   width: 800px;
@@ -10,4 +11,11 @@
 
 #imagenCarrusel.fade {
   opacity: 0;
+}
+
+/* RESUMEN: transiciones suaves para las cajas */
+#boxProblema, #boxSolucion, #boxOferta {
+  overflow: hidden;
+  transition: opacity 500ms ease-in-out, max-height 500ms ease-in-out, transform 500ms ease-in-out;
+  max-height: 100vh;
 }

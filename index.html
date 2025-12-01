@@ -4,59 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="icon" href="IMG/legalRadarLogo-SinFondo.png" type="image/png">
+    <link rel="icon" href="IMG/legalRadarLogo-SinFondo2.png" type="image/png">
 
     <!-- AQUI EL LINK CSS -->
-     <link rel="stylesheet" href="CSS/estiloIndex.css">
+    <link rel="stylesheet" href="CSS/estiloIndex.css">
+    <!--CDN de Tailwiind CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="IMG/legalRadarLogo-SinFondo.png" alt="Logo de Legal Radar">
-        </div>
-        <h1>LEGAL RADAR - NORMAX</h1>
-        <nav class="nav-principal">
-            <ul class="nav-principal">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="acercaDe.html">Acerca de nosotros</a></li>
-                <li><a href="seccionInformativa.html">Seccion Informativa</a></li>
-                <li><a href="modulos.html">Modulos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-            <div class="menu-hamburguesa">
-                <span></span>
-                <span></span>
-                <span></span>
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+
+    <header class="bg-yellow-400 p-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="logo flex items-center">
+                <img src="IMG/legalRadarLogo-SinFondo2.png" alt="Logo de Legal Radar"
+                    class="max-w-[120px] h-auto object-contain" />
             </div>
+            <h1 class="text-xl font-bold">LEGAL RADAR - NORMAX</h1>
+        </div>
+        
+        <nav class="nav-principal">
+            <ul class="nav-principal hidden md:flex space-x-6 font-medium"">
+                <li><a href="index.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Inicio</a></li>
+                <li><a href="acercaDe.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Acerca de nosotros</a></li>
+                <li><a href="seccionInformativa.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Seccion Informativa</a></li>
+                <li><a href="modulos.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Modulos</a></li>
+                <li><a href="contacto.html" class="block px-3 py-2 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-2">Contacto</a></li>
+            </ul>
+            <button class="menu-hamburguesa md:hidden flex flex-col space-y-1 cursor-pointer" aria-label="Menu">
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-1"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-2"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-line-3"></span>
+            </button>
+        </nav>
+        
+        <nav id="navMobile" class="nav-mobile hidden md:hidden flex-col fixed top-0 right-0 h-screen w-64 bg-yellow-400 shadow-lg z-40 transform transition-transform duration-300 translate-x-full pt-4 px-4">
+            <button class="menu-hamburguesa-close self-end flex flex-col space-y-1 cursor-pointer mb-6" aria-label="Cerrar">
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-1"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-2"></span>
+                <span class="block w-6 h-0.5 bg-black transition-all duration-300 hamburguesa-close-line-3"></span>
+            </button>
+            <a href="index.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Inicio</a>
+            <a href="acercaDe.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Acerca de nosotros</a>
+            <a href="seccionInformativa.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Seccion Informativa</a>
+            <a href="modulos.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Modulos</a>
+            <a href="contacto.html" class="block px-4 py-3 rounded transition-all duration-300 hover:bg-green-500 hover:-translate-y-1">Contacto</a>
         </nav>
     </header>
 
-    <main>
+    <main class="bg-white shadow-lg mx-auto w-11/12 md:w-10/12 lg:w-4/5">
         <!-- PARA DESCRIPCION Y LOGO -->
-        <section class="hero">
-            <h2>LEGAL RADAR - NORMAX</h2>
-            <p>DESCRIPCION (AQUI LA DESCRIPCION)XXXXXXXXXXXXXXXXXXXXXXXX</p>
-            <img src="IMG/legalRadarLogo-SinFondo.png" alt="Logo de LegalRadar">
-        </section> 
+    <section class="mx-auto max-w-6xl mt-20 mb-10">
+    <div class="bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-6 p-6 relative">
 
-        <!-- PARA RESUMEN DE LA PAGINA PROBLEMA-SOLUCION -->
-        <section class="resumen-solucion">
-            <h2>Problematica</h2>
-            <p>TEXTOOOOOOOOOOOOOOOOO</p>
-            <h2>Solución</h2>
-            <p>TEXTOOOOOOOOOOOOOOOOO</p>
+        <!-- Logo grande y sobresaliendo -->
+        <img 
+        src="IMG/legalRadarLogo-SinFondo2.png" 
+        alt="Logo de LegalRadar" 
+        class="w-44 md:w-56 h-auto -mt-10 md:-ml-10 drop-shadow-lg"
+        >
 
-            <h2>Lo que ofrecemos</h2>
-            <ul id="solucion"></ul>
-            <p style="text-align: center; font-style: italic;">Estudio rapido y facil.</p>
-        </section> 
+        <!-- Texto -->
+        <div class="text-center md:text-left flex flex-col justify-center mt-4 md:mt-0">
+        <h2 class="text-3xl font-bold mb-2">LEGAL RADAR - NORMAX</h2>
+        <p class="text-gray-600">
+            <strong>Prototipo </strong>  web interactivo orientado a nuevos y futuros conductores. La propuesta integra preguntas, retroalimentación
+            inmediata y un sistema de categorías de multas diseñado para facilitar el aprendizaje significativo de las multas de 
+            tránsito. El proyecto incluye su fundamentación teórica, su proceso de diseño y los resultados obtenidos a partir del 
+            análisis documental realizado.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+
+
+        <!-- PARA RESUMEN DE LA PAGINA PROBLEMA-SOLUCION: tres cajas con layout responsive -->
+        <section class="resumen-solucion px-4 py-10 max-w-6xl mx-auto">
+            <div id="resumenContainer" class="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-6 min-h-0">
+
+                <!-- Caja: Problemática (inicialmente visible) -->
+                <div id="boxProblema" class="w-full md:w-1/3 bg-white border-4 border-yellow-400 rounded-lg transition-all duration-500 ease-in-out shadow-lg relative flex flex-col overflow-hidden">
+                    <div class="bg-gray-300 px-6 py-4 flex justify-between items-center">
+
+                        <h3 class="text-xl font-semibold border-2 border-yellow-400 inline-block px-3 py-1 rounded">Problemática</h3>
+                        <button id="btnProblema" class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center text-white focus:outline-none animate-pulse" aria-expanded="false" aria-controls="boxSolucion" title="Mostrar solución">
+                            <svg id="iconP" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                                <path id="plusP" d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                                <path id="arrowP" d="M8 5l8 7-8 7" stroke-linecap="round" stroke-linejoin="round" class="hidden" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <p>La educación vial en Costa Rica presenta problemas que se evidencian en las altas tasas de reprobación 
+                            en las pruebas teóricas de manejo las cuales son el primer paso para obtener la licencia, además de la 
+                            falta de cultura vial presente en la población costarricense. </p>
+                    </div>
+                </div>
+
+                <!-- Caja: Solución (oculta al cargar) -->
+                <div id="boxSolucion" class="w-full md:w-1/3 bg-white border-4 border-yellow-400 rounded-lg transition-all duration-500 ease-in-out shadow-lg opacity-0 scale-95 pointer-events-none relative flex flex-col overflow-hidden">
+                    <div class="bg-gray-300 px-6 py-4 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold border-2 border-yellow-400 inline-block px-3 py-1 rounded">Solución</h3>
+                        <button id="btnSolucion" class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center text-white focus:outline-none" aria-expanded="false" aria-controls="boxOferta" title="Mostrar lo que ofrecemos">
+                            <svg id="iconS" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                                <path id="plusS" d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round" />
+                                <path id="arrowS" d="M8 5l8 7-8 7" stroke-linecap="round" stroke-linejoin="round" class="hidden" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <p>Se desarrolla una solución tecnológica que ayuda a que la información sea clara y accesible, ofreciendo
+                            retroalimentación e interacción con el usuario.
+                            El prototipo se conforma de cinco módulos, cada uno se centra en cada una de las categorías de
+                            multas.</p>
+                    </div>
+                </div>
+
+                <!-- Caja: Lo que ofrecemos (oculta al cargar) -->
+                <div id="boxOferta" class="w-full md:w-1/3 bg-white border-4 border-yellow-400 rounded-lg transition-all duration-500 ease-in-out shadow-lg opacity-0 scale-95 pointer-events-none relative flex flex-col overflow-hidden">
+                    <div class="bg-gray-300 px-6 py-4">
+                        <h3 class="text-xl font-semibold border-2 border-yellow-400 inline-block px-3 py-1 rounded">Lo que ofrecemos</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="list-disc list-inside">
+                            <li>Servicio A</li>
+                            <li>Servicio B</li>
+                            <li>Servicio C</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- PARA EL CARRUSEL -->
-        <section>
-            <div class="carrusel">
-                <button id="prev">⬅</button>
-                <img id="imagenCarrusel" src="" alt="Imagen carrusel">
-                <button id="next">➡</button>
+        <section class="px-4 py-10 max-w-6xl mx-auto">
+            <div class="carrusel flex flex-col items-center gap-6">
+                <img id="imagenCarrusel" src="" alt="Imagen carrusel" class="rounded-lg shadow-lg">
+                <div class="flex gap-4">
+                    <button id="prev" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">⬅</button>
+                    <button id="next" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">➡</button>
+                </div>
             </div>
             <script src="JS/scriptCarrusel.js"></script>
         </section> 
@@ -65,13 +155,25 @@
         <!-- CARGAR DEL JSON LA INFO (PROBLEMA-SOLUCION, CARRUSEL) -->
     </main>
 
-    <footer>
-        <p>&copy; 2025 LEGALRADAS. Todos los derechos reservados</p>
-        <p>
-            <a href="https://www.facebook.com">Facebook</a> |
-            <a href="https://www.instagram.com">Instagram</a> |
-            <a href="https://www.tiktok.com">TikTok</a>
-        </p>
+    <footer class="bg-gray-800 border-t-4 border-red-600 py-6 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4">
+            <p class="text-white text-center">&copy; 2025 LEGALRADAS. Todos los derechos reservados</p>
+            <div class="w-24 border-t border-white opacity-50"></div>
+            <div class="flex gap-6 justify-center">
+                <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-400 transition-colors" title="Facebook">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-400 transition-colors" title="Instagram">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.79.263-1.459.597-2.119 1.357-.76.66-1.094 1.329-1.357 2.119-.267.788-.468 1.658-.528 2.936C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.528 2.936.263.79.597 1.459 1.357 2.119.66.76 1.329 1.094 2.119 1.357.788.268 1.658.468 2.936.528C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.936-.528.79-.263 1.459-.597 2.119-1.357.76-.66 1.094-1.329 1.357-2.119.268-.788.468-1.658.528-2.936.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.149-.528-2.936-.263-.79-.597-1.459-1.357-2.119-.66-.76-1.329-1.094-2.119-1.357-.788-.267-1.658-.468-2.936-.528C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.07 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.354-2.227.408-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.354 2.227-.408 1.264-.061 1.646-.07 4.849-.07zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm5.593-10.531a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+    <script src="JS/scriptIndex.js"></script>
 </body>
 </html>
