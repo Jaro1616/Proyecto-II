@@ -27,7 +27,7 @@ const form = document.getElementById('contactForm');
                 }
 
                 // Validar captcha
-                const captchaResponse = grecaptcha.getResponse();
+                const captchaResponse = (typeof grecaptcha !== "undefined" ) ? grecaptcha.getResponse() : "";
                 if (!captchaResponse) {
                 alert("Por favor completa el captcha.");
                 return;
