@@ -1,3 +1,25 @@
+/* 
+=====================================================================
+ARCHIVO estiloModulos
+---------------------------------------------------------------------
+1) Contenedor principal:
+   - Centrado en pantalla
+   - Ancho máximo controlado
+   - Tipografía estándar
+
+2) Lista de módulos:
+   - Organización en forma de grid
+   - Espaciado uniforme entre elementos
+   - Eliminación de viñetas para un diseño limpio
+
+3) Tarjetas de cada módulo:
+   - Fondo blanco con bordes redondeados
+   - Sombras suaves tipo "card"
+   - Animación hover que eleva la tarjeta y aumenta la sombra
+   - Texto centrado y fácil de leer
+=====================================================================
+*/
+
 .modulos {
   max-width: 600px;
   margin: 0 auto;

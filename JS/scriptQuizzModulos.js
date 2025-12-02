@@ -1,8 +1,40 @@
-// 1. Leer parámetro modulo de la URL
+/* 
+=====================================================================
+ARCHIVO: scriptQuizzModulos
+---------------------------------------------------------------------
+1) Lee el parámetro "modulo" desde la URL
+   - Ejemplo: quizzModulo.html?modulo=via
+   - según ese valor selecciona qué archivo JSON de preguntas cargar
+
+2) Carga un archivo JSON específico para cada módulo
+   - via → JSON/quizzVia.json
+   - estacionamiento → JSON/quizzEstacionamiento.json
+   - administrativas → JSON/quizzAdministrativas.json
+   - alcohol → JSON/quizzAlcohol.json
+   - peatones → JSON/quizzPeatones.json
+
+3) Construye dinámicamente el quiz
+   - Muestra una pregunta a la vez
+   - Genera 4 botones de respuesta
+   - Marca visualmente las respuestas correctas e incorrectas
+   - Muestra una retroalimentación (feedback) con texto e imagen
+     de un policía cuando el usuario se equivoca
+
+4) Controla el flujo del cuestionario
+   - Si responde correcto, bloquea las opciones y pasa a la siguiente
+     pregunta después de un pequeño retraso
+   - Si responde incorrecto, muestra el feedback pero permite intentar
+     de nuevo con las otras opciones
+
+5) Muestra el resultado final
+   - Al terminar todas las preguntas, muestra cuántas respuestas correctas
+     obtuvo el usuario sobre el total
+=====================================================================
+*/
+
 const params = new URLSearchParams(window.location.search);
 const modulo = params.get("modulo");
 
-// 2. Referencias a elementos del dominio
 const moduloTitulo = document.getElementById("modulo-titulo");
 const progressEl = document.getElementById("progress");
 const questionTextEl = document.getElementById("question-text");
@@ -12,7 +44,6 @@ const feedbackText = document.getElementById("feedback-text");
 const policemanImg = document.getElementById("policeman-img");
 const resultEl = document.getElementById("result");
 
-// 3. ruta archivo JSON
 const moduloToJson = {
   via: "JSON/quizzVia.json",
   estacionamiento: "JSON/quizzEstacionamiento.json",
@@ -21,7 +52,6 @@ const moduloToJson = {
   peatones: "JSON/quizzPeatones.json"
 };
 
-// 4. Texto para el título del módulo
 const moduloToTitulo = {
   via: "🚗 Infracciones en la vía",
   estacionamiento: "🅿️ Estacionamiento",
@@ -67,9 +97,7 @@ function initQuiz() {
     });
 }
 
-// 6. Mostrar pregunta actual
 function mostrarPregunta() {
-  // Si ya no hay más preguntas -> mostrar resultado
   if (preguntaActualIndex >= preguntas.length) {
     mostrarResultadoFinal();
     return;
@@ -77,18 +105,14 @@ function mostrarPregunta() {
 
   const preguntaActual = preguntas[preguntaActualIndex];
 
-  // Actualizar texto de pregunta y progreso
   questionTextEl.textContent = preguntaActual.pregunta;
   progressEl.textContent = `Pregunta ${preguntaActualIndex + 1} de ${preguntas.length}`;
 
-  // Limpiar respuestas anteriores
   answersContainer.innerHTML = "";
 
-  // Ocultar feedback
   feedbackBox.style.display = "none";
   feedbackText.textContent = "";
 
-  // Construir botones de respuesta
   preguntaActual.opciones.forEach(opcion => {
     const btn = document.createElement("button");
     btn.className = "answer-btn";
@@ -102,42 +126,33 @@ function mostrarPregunta() {
   });
 }
 
-// 7. Manejar respuesta seleccionada
 function manejarRespuesta(opcion, btnClickeado) {
   const botones = Array.from(document.querySelectorAll(".answer-btn"));
 
   if (opcion.correcto) {
-    // Marcar como correcta
     btnClickeado.classList.add("correct");
-    // Deshabilitar todos los botones para que no siga clickeando
     botones.forEach(b => b.disabled = true);
 
-    // Mostrar feedback de correcto
     policemanImg.style.display = "none";
     feedbackText.textContent = opcion.feedback || "¡Correcto!";
     feedbackBox.style.display = "flex";
 
     aciertos++;
 
-    // Pasar a la siguiente pregunta después de un pequeño delay
     setTimeout(() => {
       preguntaActualIndex++;
       mostrarPregunta();
     }, 1500);
   } else {
-    // Marcar esta opción como incorrecta
     btnClickeado.classList.add("incorrect");
-    btnClickeado.disabled = true; // que no vuelva a escoger la misma
+    btnClickeado.disabled = true;
 
-    // Mostrar policía y feedback de esa opción
     policemanImg.style.display = "block";
     feedbackText.textContent = opcion.feedback || "Respuesta incorrecta.";
     feedbackBox.style.display = "flex";
-    // el usuario debe seleccionar la correcta
   }
 }
 
-// 8. Mostrar resultado final
 function mostrarResultadoFinal() {
   questionTextEl.textContent = "¡Has completado el módulo!";
   answersContainer.innerHTML = "";

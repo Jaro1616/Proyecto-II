@@ -1,6 +1,30 @@
-/* ============================= */
-/* ESTILOS GENERALES */
-/* ============================= */
+/* 
+=====================================================================
+ARCHIVO estiloQuizz
+---------------------------------------------------------------------
+1) ESTILOS GENERALES
+   - Configura el body y el layout general de la página
+   - Ubica el quizz centrado entre header y footer
+
+2) CONTENEDOR DEL QUIZZ
+   - Caja principal, sombra, bordes, padding y tamaño máximo
+
+3) PREGUNTAS Y RESPUESTAS
+   - Estilos del texto de la pregunta
+   - Diseño de los botones de respuesta
+   - Colores para respuestas correctas e incorrectas
+
+4) FEEDBACK
+   - Caja que aparece cuando el usuario falla una pregunta
+   - Incluye imagen del policía y texto de retroalimentación
+
+5) RESULTADO FINAL
+   - Mensaje que se muestra al finalizar todas las preguntas
+
+6) ENLACE "VOLVER"
+   - Estilo del link para regresar al listado de módulos
+=====================================================================
+*/
 
 body {
   font-family: Arial, sans-serif;
@@ -50,10 +74,6 @@ main {
   color: #777;
 }
 
-/* ============================= */
-/* PREGUNTA Y RESPUESTAS */
-/* ============================= */
-
 #question-text {
   font-size: 1.2rem;
   margin: 20px 0;
@@ -93,10 +113,6 @@ main {
   border-color: #e74c3c;
 }
 
-/* ============================= */
-/* FEEDBACK */
-/* ============================= */
-
 #feedback-box {
   display: none; 
   margin-top: 10px;
@@ -115,31 +131,4 @@ main {
 
 #feedback-text {
   font-size: 0.95rem;
-}
-
-/* ============================= */
-/* RESULTADO FINAL */
-/* ============================= */
-
-#result {
-  display: none;
-  margin-top: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* ============================= */
-/* ENLACE VOLVER */
-/* ============================= */
-
-#back-link {
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 0.95rem;
-  color: #3498db;
-  text-decoration: none;
-}
-
-#back-link:hover {
-  text-decoration: underline;
 }

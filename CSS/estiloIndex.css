@@ -1,6 +1,25 @@
+/* 
+=====================================================================
+ARCHIVO estiloIndex
+---------------------------------------------------------------------
+1) SECCIÓN DEL CARRUSEL
+   - Ajusta la imagen principal del carrusel
+   - Aplica bordes redondeados y un tamaño fijo
+   - Implementa un efecto de transición suave tipo *fade* para animar
+     el cambio entre imágenes
 
+2) SECCIONES PROBLEMA / SOLUCIÓN / OFERTA
+   - Controla la animación al mostrar u ocultar cada caja
+   - Permite que se expandan/cierren suavemente usando:
+        • opacidad
+        • max-height
+        • transform
+   - Estas cajas funcionan junto con un script
+   - Para el comportamiento tipo acordeon presente
+     en la página principal
+=====================================================================
+*/
 
-/* SECCION DEL CARRUSEL */
 #imagenCarrusel {
   width: 800px;
   height: 550px;
@@ -13,7 +32,6 @@
   opacity: 0;
 }
 
-/* RESUMEN: transiciones suaves para las cajas */
 #boxProblema, #boxSolucion, #boxOferta {
   overflow: hidden;
   transition: opacity 500ms ease-in-out, max-height 500ms ease-in-out, transform 500ms ease-in-out;

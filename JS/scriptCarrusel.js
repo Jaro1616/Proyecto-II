@@ -1,4 +1,24 @@
-//PARA EL CARRUSEL EN EL INDEX
+/* 
+=====================================================================
+ARCHIVO scriptCarrusel
+---------------------------------------------------------------------
+1) CARRUSEL DE IMÁGENES:
+   - Carga las imágenes desde un archivo JSON
+   - Muestra la primera imagen al cargar la página
+   - Permite navegar con botones "anterior" y "siguiente"
+   - Cambia automáticamente cada 3.5 segundos
+   - Usa una animación tipo "fade" al cambiar entre imágenes
+
+2) SECCIÓN "LO QUE OFRECEMOS":
+   - Carga una lista de ítems desde un archivo JSON.
+   - Crea elementos <li> dinámicamente.
+   - Inserta un icono + texto para mostrar cada oferta/servicio.
+
+Toda la funcionalidad depende de datos externos almacenados en JSON,
+permitiendo modificar contenido sin tocar el código JavaScript.
+=====================================================================
+*/
+
 fetch("JSON/carruselImagenes.json")
   .then(response => response.json())
   .then(data => {
@@ -7,38 +27,31 @@ fetch("JSON/carruselImagenes.json")
     const btnPrev = document.getElementById("prev");
     const btnNext = document.getElementById("next");
 
-    // Mostrar la primera imagen
     img.src = "IMG/carrusel/" + data[indice].imagen;
 
-    // Función para cambiar imagen con animación
     function cambiarImagen(nuevoIndice) {
-      img.classList.add("fade"); // activa animación
+      img.classList.add("fade");
       setTimeout(() => {
         indice = nuevoIndice;
         img.src = "IMG/carrusel/" + data[indice].imagen;
-        img.classList.remove("fade"); // quita animación
-      }, 500); // duración de la animación (0.5s)
+        img.classList.remove("fade");
+      }, 500);
     }
 
-    // Botón siguiente
     btnNext.addEventListener("click", () => {
       cambiarImagen((indice + 1) % data.length);
     });
 
-    // Botón anterior
     btnPrev.addEventListener("click", () => {
       cambiarImagen((indice - 1 + data.length) % data.length);
     });
 
-    // Cambio automático cada 2 segundos
     setInterval(() => {
       cambiarImagen((indice + 1) % data.length);
     }, 3500);
   })
   .catch(error => console.error("Error cargando JSON:", error));
 
-
-//PARA "LO QUE OFRECEMOS" EN EL INDEX
 fetch("JSON/solucionIndexDatos.json")
   .then(response => response.json())
   .then(data => {
