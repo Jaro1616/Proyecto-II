@@ -1,4 +1,5 @@
-const form = document.getElementById('contactForm');
+document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
             const modal = document.getElementById('modal');
             const modalContent = document.getElementById('modalContent');
 
@@ -16,10 +17,22 @@ const form = document.getElementById('contactForm');
                 return;
                 }
 
-                if (!correo.includes('@')) {
-                    alert("El correo debe ser válido.");
+            // Lista de dominios válidos
+            const dominiosValidos = ["gmail.com", "hotmail.com", "est.utn.ac.cr","utn.ac.cr", "outlook.com"];
+
+            // Validar formato general de correo
+            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexCorreo.test(correo)) {
+                alert("El correo debe tener un formato válido (ejemplo: usuario@dominio.com).");
                 return;
-                }
+            }
+
+            // Validar dominio específico
+            const dominio = correo.split('@')[1].toLowerCase();
+            if (!dominiosValidos.includes(dominio)) {
+                alert("El dominio del correo debe ser Gmail, Hotmail, Yahoo u Outlook.");
+                return;
+            }
 
                 if (asunto.length < 5) {
                     alert("El asunto debe tener al menos 5 caracteres.");
@@ -43,6 +56,7 @@ const form = document.getElementById('contactForm');
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
             });
+        });
 
             function cerrarModal() {
                 modal.classList.add('hidden');
