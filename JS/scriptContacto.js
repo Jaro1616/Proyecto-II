@@ -74,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.classList.remove('hidden');
         modal.classList.add('flex');
+
+        form.reset();
+
+        if (typeof grecaptcha !== "undefined") {
+            grecaptcha.reset();
+        }
     });
 });
 
